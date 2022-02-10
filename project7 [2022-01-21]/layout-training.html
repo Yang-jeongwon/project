@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    #menu {
+      width: 10vw;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    #menu ul {
+      width: inherit;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #menu ul li {
+      margin: 2vw;
+      color: #333;
+    }
+    #container {
+      padding-left: 11vw;
+      width: 100vw;
+      height: 100vh;
+      background-color: #f1f3f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #content-box {
+      width: 50vw;
+      height: 50vh;
+      background-color: #fff;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 1vw;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #444;
+    }
+    #content-box div {
+      width: 50%;
+      height: 100%;
+    }
+    #content-box div:nth-child(1) {
+      background-color: #ccc;
+    }
+    #content-box div:nth-child(2) {
+      padding: 1vw;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    #content-box div:nth-child(2) h1 {
+      font-weight: 100;
+      margin-bottom: 1vw;
+    }
+    #content-box div:nth-child(2) hr {
+      width: 100%;
+      margin-bottom: 1vw;
+    }
+    #content-box div:nth-child(2) p {
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="menu">
+    <ul>
+      <li>menu-1</li>
+      <li>menu-2</li>
+      <li>menu-3</li>
+      <li>menu-4</li>
+      <li>menu-5</li>
+    </ul>
+  </nav>
+  <div id="container">
+    <div id="content-box">
+      <div></div>
+      <div>
+        <h1>title</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum cupiditate ad vero, inventore quis repellat
+          cum, ipsa consequuntur hic nihil unde? Repellendus at labore illum ea quae, ab numquam amet?</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+      // init
+      const container = document.querySelector('#container');
+      const contentBox = document.querySelector('#content-box');
+      const menu = document.querySelector('#menu');
+      let opacityValue = 0;
+      let marginTopValue = 0;
+      let marginLeftValue = -10;
+      // javascipt styling
+      contentBox.style.opacity = opacityValue;
+      contentBox.style.marginTop = marginTopValue + "vw";
+      menu.style.opacity = opacityValue;
+      menu.style.marginLeft = marginLeftValue + "vw";
+      // page load event
+      let loadFadeIn = setInterval(function () {
+        if (opacityValue < 1) {
+          opacityValue = opacityValue + 0.1;
+          marginTopValue = marginTopValue + (0.08);
+          contentBox.style.marginTop = -(marginTopValue) + "vw";
+          contentBox.style.opacity = opacityValue;
+          menu.style.opacity = opacityValue;
+          if (marginLeftValue <= 10) {
+            marginLeftValue = marginLeftValue + 0.9;
+            menu.style.marginLeft = marginLeftValue + "vw";
+          } else {
+            marginLeftValue = 10;
+            menu.style.marginLeft = marginLeftValue + "vw";
+          }
+        } else {
+          setInterval(loadFadeIn);
+        }
+      }, 16);
+      container.style.backgroundColor = "#f1f3f4";
+      // mouseover mouseleave event
+      menu.addEventListener("mouseover", function () {
+        container.style.transition = "1s";
+        container.style.backgroundColor = "#333";
+      });
+      menu.addEventListener("mouseleave", function () {
+        container.style.transition = "1s";
+        container.style.backgroundColor = "#f1f3f4";
+      });
+    });
+  </script>
+</body>
+
+</html>

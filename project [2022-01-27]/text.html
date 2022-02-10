@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    #container {
+      width: 100vw;
+      height: 200vh;
+      background-color: #333;
+    }
+
+    #container section {
+      border-top: 1px solid red;
+      width: inherit;
+      height: 50%;
+
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    /* section-1 ********************************************************** */
+
+
+
+    #container section:nth-child(1) article {
+      width: 70vw;
+      height: 70vh;
+      border: 1px solid #fff;
+      color: white;
+    }
+
+    #container section:nth-child(1) article>div {
+      width: inherit;
+      height: 50%;
+      border: 3px solid blue;
+    }
+
+    /* items */
+
+    #title-box {
+
+
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #title-box div:nth-child(1) {
+      width: 60vw;
+      height: 10vh;
+      background-color: #555;
+    }
+
+    #title-box div:nth-child(2) {
+      width: 10vw;
+      height: 10vh;
+      background-color: red;
+    }
+
+
+    /* section-2 ********************************************************** */
+
+    #container section:nth-child(2) article {
+      width: 70vw;
+      height: 70vh;
+      border: 1px solid #fff;
+      color: white;
+
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #vertical-box {
+      width: 10vw;
+      height: 100%;
+      background-color: salmon;
+    }
+
+
+
+    #image-box {
+      width: 50vw;
+      height: 100%;
+      /* background-color: #fff; */
+      padding: 2vw;
+    }
+
+    #image-box>div {
+      width: 40vw;
+      height: 40vh;
+      background-color: darkcyan;
+    }
+
+    #image-box>h1 {
+      font-size: 4rem;
+      text-align: center;
+      margin: 2vh;
+
+    }
+
+
+    /* fixed dots */
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    nav {
+      width: 5vw;
+      height: 100vh;
+      background-color: blanchedalmond;
+
+      position: fixed;
+      right: 0;
+
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    nav ul {
+      border: 1px solid black;
+      width:inherit;
+      height: 50vh;
+      /* flex */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+    }
+    nav ul li {
+      width: 1vw;
+      height: 1vw;
+      border-radius: 0.5vw;
+      background-color: black;
+      
+      display: block;
+      
+    }
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+  </nav>
+
+
+  <div id="container">
+    <section>
+      <article>
+        <div id="title-box">
+          <div>
+            <h1>lorem ipsum</h1>
+          </div>
+          <div>
+            star
+          </div>
+        </div>
+        <div id="text-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur voluptatem soluta maiores doloremque
+            architecto inventore ab dolore? Modi doloremque, ratione iusto, a perferendis dolore odio, laboriosam
+            mollitia molestias in expedita at repellat? Ut at nulla voluptatum officia aliquam debitis asperiores.
+
+
+          </p>
+        </div>
+      </article>
+
+    </section>
+    <section>
+      <article>
+        <div id="vertical-box"></div>
+        <div id="image-box">
+          <div></div>
+          <h1>hello</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum et nobis est. Dolorum eius, quisquam
+            assumenda obcaecati molestiae odit cupiditate, ipsa iure pariatur necessitatibus quae facere voluptatibus ad
+            molestias. Atque a debitis laboriosam facere dolores, assumenda soluta tenetur accusamus accusantium. </p>
+        </div>
+      </article>
+
+
+    </section>
+  </div>
+</body>
+
+</html>

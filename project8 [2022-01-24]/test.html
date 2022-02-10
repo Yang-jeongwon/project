@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout-training</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    #container {
+      width:100vw;
+      height:100vh;
+      background-color: salmon;
+    }
+    #container header {
+      width:inherit;
+      height:10vh;
+      background-color: #ddd;
+      /* flex */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #container header div {
+      min-width: 5vw;
+      height: 5vh;
+      margin: 10vw;
+      background-color: salmon;
+    }
+    #container header div:nth-child(2) {
+      width: 70vw;
+    }
+    #container main {
+      width:inherit;
+      height:90vh;
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #thumnail-container {
+      border-top: 1px solid red;
+      width:inherit;
+      height:inherit;
+      /* flex */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    #thumnail-container div {
+      width:10vw;
+      height:10vw;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div></div>
+      <div></div>
+    </header>
+    <main>
+      <div id="thumnail-container">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html> 
+ 122  [24] layout-training/20220125-layout-training-2.html 

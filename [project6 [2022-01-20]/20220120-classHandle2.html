@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    #wrap {
+      width:100vw;
+      height:100vh;
+      /* flex */
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    #wrap div {
+      width:30vw;
+      height:30vh;
+      background-color:salmon;
+      border:1px dashed red;
+    }
+
+    .on {
+      flex-direction:column;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <script>
+    const wrap = document.querySelector('#wrap');
+
+
+    // wrap.addEventListener("click", function() {
+    //   if(wrap.classList.contains('on')) {
+    //     wrap.classList.remove('on');
+    //     wrap.style.backgroundColor = "black";
+    //     wrap.style.width = 200 + "vw";
+    //     wrap.style.height = 200 + "vh";
+    //   } else {
+    //     wrap.classList.add('on');
+    //     wrap.style.backgroundColor = "white";
+    //     wrap.style.width = 100 + "vw";
+    //     wrap.style.height = 100 + "vh";
+    //   }
+    // });
+
+    function yangjeongwon(target, eventype, className) {
+      target.addEventListener(eventype, function() {
+      if(target.classList.contains(className)) {
+        target.classList.remove(className);
+      } else {
+        target.classList.add(className);
+      }
+    });
+    }
+
+    yangjeongwon(wrap, "click", "on");
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 실패! 저녁에 다시해라 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    html,
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-color:skyblue;
+    }
+    h1, p {
+      font-size:1rem;
+      text-align:center;
+      color:#262626;
+    }
+
+    #container {
+      /* border: 1px solid #000; */
+      width: 50vw;
+      left:50%;
+      top:50%;
+      transform:translate(-50%, -50%);
+    }
+
+    #box1 {
+      background-color:red;
+      width: 400px;
+      min-width:320px;
+      height: 300px;
+      border-radius: 10px;
+      opacity:0.6;
+    }
+
+    #box2 {
+      background-color: #ddd;
+      min-width:200px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow:0 0 10px rgba(0,0,0,.2);
+    }
+    #text {
+      border: 1px solid #262626;
+      font-size: 0.8rem;
+      width:200px;
+      right:30%;
+      bottom:30%;
+      transform:translate(-30%, -30%);
+    }
+
+    .position-absolute {position:absolute;}
+
+
+    @media all and (min-width:320px) and (max-width:768px) {
+      #text {
+        right:10%;
+        bottom:10%;
+      }
+      /* 반응형일떄 레이아웃변화를 어떻게 줘야하는지 잘모르겠씁니다  */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id=container class="position-absolute">
+    <div id=box1></div>
+    <div id=box2 class="position-absolute">
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam incidunt praesentium modi a dolorum
+      aliquam, excepturi odit recusandae accusamus sint molestiae omnis quae perspiciatis illum. Earum perspiciatis
+      numquam inventore quasi.</h1>
+      </div>
+  </div>
+    <div id=text class="position-absolute">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+</body>
+
+</html>

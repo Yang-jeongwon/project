@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20220125-layout-training</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+    /* position */
+    .absolute {position: absolute;}
+    .relative {position: relative;}
+
+    /* flex */
+    .flex {display: flex;}
+    .column {flex-direction: column;}
+    .align-i-center {align-items: center;}
+    .align-i-end {align-items: flex-end;}
+    .align-self-start {align-self: start;}
+    .space-around {justify-content: space-around;}
+    .justify-content-end {justify-content: flex-end;}
+    .justify-content-center {justify-content: center}
+
+    /* font */
+    .font-weight-300 {font-weight: 300;}
+    .font-weight-500 {font-weight: 500;}
+
+    /* text */
+    .text-align-center {text-align: center;}
+    .white-space-nowrap {white-space: nowrap;}
+
+    * {
+      padding:0;
+      margin:0;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    body {
+      background-color: rgb(31, 31, 31);
+      width:100vw;
+      height:100vh;
+      box-sizing: border-box;
+    }
+    /* 인삿말 */
+    #introduce {
+      width:50%;
+      height:20%;
+      text-align: center;
+    }
+    /* 형광 문구 */
+    #title {
+      transform: translateY(40px) rotate(-3deg);
+      width:100%;
+      height:100%;
+      opacity: 0;
+    }
+    #title p, #title span {
+      font-family: 'Nosifer', cursive;
+      line-height: .8;
+      color: rgb(255, 0, 255);
+      letter-spacing: -.025em;
+    }
+    #title p {
+      font-size: 60px;
+    }
+    #title span {
+      font-size: 70px;
+    }
+    /* 저는 센스없는~~ */
+    #back {
+      left:50%;
+      top:90px;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+    #back span {
+      font-size:50px;
+      color:rgba(255,255,255,.9);
+      letter-spacing: -.025em;
+    }
+
+    /* 콘텐츠 */
+    #button {
+      color:rgba(255,255,255,.9);
+      font-size:20px;
+      z-index: 1;
+      cursor: pointer;
+    }
+    #container {
+      width:100%;
+      height:80%;
+    }
+    .dot {
+      width:6px;
+      height:6px;
+      border-radius: 50%;
+      background-color: #fafafa;
+    }
+    .text {
+      opacity: 0;
+      width:100px;
+      height:30px;
+      line-height: 30px;
+      border-radius: 5px;
+      background-color: rgba(255,255,255,.9);
+      transform: translate(20px, -30%);
+      box-shadow: 0 0 15px rgb(255, 238, 0);
+      color:#262626;
+    }
+  </style>
+</head>
+<body class="flex column align-i-center">
+  <div id="introduce" class="flex align-i-center">
+    <div id="title" class="flex justify-content-center align-i-center column">
+      <p class="text-align-center white-space-nowrap">I'm fxxking cool</p>
+      <span class="text-align-center white-space-nowrap">web-designer</span>
+    </div>
+    <div id="back" class="absolute">
+      <span class="font-weight-500 white-space-nowrap">저는 센스없는 웹디자이너입니다.</span>
+    </div>
+  </div>
+  <div id="button" class="relative font-weight-300">why?</div>
+  <div id="container" class="flex column space-around align-i-center">
+    <div id="dot1" class="dot">
+      <div class="text font-weight-300 text-align-center">Hi</div>
+    </div>
+    <div id="dot2" class="dot">
+      <div class="text font-weight-300 text-align-center">Hello</div>
+    </div>
+    <div id="dot3" class="dot">
+      <div class="text font-weight-300 text-align-center">Nihao</div>
+    </div>
+    <div id="dot4" class="dot">
+      <div class="text font-weight-300 text-align-center">Konnichiwa</div>
+    </div>
+    <div id="dot5" class="dot">
+      <div class="text font-weight-300 text-align-center">Hola</div>
+    </div>
+  </div>
+
+  <script>
+    const btn1 = document.querySelector("#button");
+    const text = document.querySelectorAll(".text");
+    const title = document.querySelector("#title");
+    const back = document.querySelector('#back span');
+
+    btn1.addEventListener('click', function(){
+      if (title.style.opacity == 0) {
+        back.style.color = "rgba(255,255,255,.3)";
+        title.style.opacity = 1;
+        title.style.transition = .5 + "s";
+        for (let i = 0; i < text.length; i++) {
+        text[i].style.opacity = 1;
+        text[i].style.transition = .5 + "s";
+        } 
+      } else {
+        back.style.color = "rgba(255,255,255,.9)";
+        title.style.opacity = 0;
+        title.style.transition = .5 + "s";
+        for (let i = 0; i < text.length; i++) {
+        text[i].style.opacity = 0;
+        text[i].style.transition = .5 + "s";
+        }
+      }
+    });
+  </script>
+</body>
+</html>

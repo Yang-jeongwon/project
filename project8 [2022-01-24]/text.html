@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{padding:0; margin:0; box-sizing: border-box;}
+
+    /* constuction */
+    #container {
+      border: 1px solid red;
+    }
+    #content-box {
+      border: 3px solid green;
+    }
+    #content-box div {
+      border: 1px solid blue;
+    }
+
+    #main-box section {
+      border: 1px solid violet;
+    }
+    /*  ************************************************************************************************** */
+
+    #container {
+      width: 100vw;
+      height: 100vh;
+      background-color: #333;
+
+      display:flex;
+      justify-content:center;
+      align-items: center;
+    }
+
+    #content-box {
+      width: 50vw;
+      height: 80vh;
+
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
+    #content-box div {
+      width:50%;
+    }
+
+    #content-box div:nth-child(1) {
+      height: 80%;
+    }
+    #content-box div:nth-child(2) {
+      height: 20%;
+    }
+
+    #main-box {
+      display:flex;
+      justify-content:center;
+      align-items: center;
+
+      position:relative;
+
+    }
+
+
+    #main-box section {
+      position: absolute;
+      width:50%;
+      height: 50%;
+    }
+
+    #main-box section:nth-child(1) {
+      width: 80%;
+      height: 80%;
+    }
+    #main-box section:nth-child(2) {
+      margin-left: 20vw;
+      width:100%;
+      height: 60%;
+    }
+
+
+    #text-box {
+      position:relative;
+    }
+
+
+    #text-box p {
+      position:absolute;
+      background-color: #555;
+
+      width: 100%;
+
+      margin-left:110%;
+      margin-top: -20%;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div id="content-box">
+    <div id="main-box">
+      <section>라인 박스</section>
+      <section>타이틀 박스</section>
+    </div>
+    <div id="text-box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur neque alias rem, dolor harum nesciunt magni, saepe provident ullam odit tempore cum, vitae nobis numquam! Itaque in nulla nisi assumenda!
+      Vitae et delectus laborum accusamus, maxime ea dignissimos vero totam repellendus. Nemo culpa, ratione sed explicabo atque odio cumque beatae error, quis, tempora inventore ea modi reiciendis necessitatibus! Incidunt, unde?
+</p>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html> 
+ 158  [24] layout-training/20220124-layout-training-2.html 

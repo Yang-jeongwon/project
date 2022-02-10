@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    * {margin:0; padding:0;}
+
+    #container {
+      width:100vw;
+      height:100vh;
+    }
+    #nav {
+      left:0;
+      top:0;
+    }
+    ul, li {
+      width:200px;
+      height:100vh;
+      background-color:salmon;
+      flex-direction:column;
+    }
+    #wrap {
+      border:1px solid red;
+      width:500px;
+      height:500px;
+      left:50%;
+      top:50%;
+      transform:translate(-50%, -50%);
+    }
+    #box {
+      border:1px solid blue;
+    }
+
+    h1, p {
+      border:1px solid #262626;
+      width:200px;
+      box-sizing:border-box;
+      text-align:justify;
+    }
+    #container:nth-child(1) {
+      background-color: skyblue;
+    }
+    #container:nth-child(2) {
+      background-color:#ddd;
+    }
+    .width-200px {width:200px;}
+    .height-200px {height:200px;}
+    .margin-top-100px {margin-top:100px;}
+    .position-relative {position:relative;}
+    .position-absolute {position:absolute;}
+    .position-fixed {position:fixed;}
+    .display-flex {display:flex;}
+    .justify-content {justify-content:center;}
+    .text-align {text-align:justify;}
+    
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="nav" class="position-fixed">
+      <ul class="display-flex">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      </ul>
+    </div>
+  </div>
+  <div id="container" class="position-relative">
+    <div id="wrap" class="position-absolute justify-content">
+      <div id="box" class="width-200px height-200px margin-top-100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cumque iusto,</div>
+      <div id="text"  class="width-200px height-200px margin-top-100px">
+        <h1>title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cumque iusto, deserunt provident, vitae quaerat ex blanditiis et veniam porro, incidunt perferendis officia? Quidem, aspernatur? Magnam iste nemo minima rerum.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>toggleClass demo</title>
+  <style>
+    p {
+      margin: 4px;
+      font-size: 16px;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+
+    .blue {
+      color: blue;
+    }
+
+    .highlight {
+      background: yellow;
+    }
+
+    .example {
+      background-color: salmon;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+
+  <p class="blue">Click to toggle</p>
+  <p class="blue highlight">highlight</p>
+  <p class="blue">on these</p>
+  <p class="blue">paragraphs</p>
+
+  <script>
+    // jQuery example official 
+    $("p").click(function () {
+      $(this).toggleClass("highlight");
+    });
+    // modern javascript design pattern 
+    // toggle class method 
+    const body = document.querySelector('body');
+    body.addEventListener('click', function (event) {
+      if (event.target.nodeName === "P") {
+        event.target.classList.toggle('example');
+      }
+    });
+    // modern javascript design pattern 
+    // contains / add / remove  class / classList method 
+    const body = document.querySelector('body');
+    body.addEventListener('click', function (event) {
+      if (event.target.nodeName === "P") {
+        if(event.target.classList.contains('example')) {
+          event.target.classList.remove('example');
+        } else {
+          event.target.classList.add('example');
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html> 
+0 comments on commit 784bf67

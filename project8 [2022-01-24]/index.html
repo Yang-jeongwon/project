@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    li {
+      list-style-type: none;
+    }
+    h1 {
+      font-size:1.5rem;
+    }
+    p {
+      font-size:1rem;
+      margin-top:10px;
+    }
+    #wrap {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, .5);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    #nav {
+      width: 100vw;
+      height: 60px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .38);
+    }
+
+    #logo {
+      width: 100px;
+      height: 30px;
+      background-color: salmon;
+      margin-left: 50px;
+    }
+
+    #gnb {
+      width: 500px;
+      height: 30px;
+      background-color: seagreen;
+      margin-right: 50px;
+    }
+
+    #main {
+      width: 100vw;
+      height: 100vh;
+      background-color: orange;
+    }
+    #text {
+      width:300px;
+      height:300px;
+      background-color: #fff;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%, -50%);
+    }
+
+    .thumnail {
+      width: 200px;
+      height: 200px;
+      background-color: #fff;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .space-between {
+      justify-content: space-between;
+    }
+
+    .aline-item {
+      align-items: center;
+    }
+
+    .space-around {
+      justify-content: space-around;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="nav">
+      <ul class="flex space-between aline-item">
+        <li id="logo">logo</li>
+        <li id="gnb">gnb</li>
+      </ul>
+    </div>
+    <div id="main" class="flex space-around aline-item">
+      <div class="thumnail"></div>
+      <div class="thumnail"></div>
+      <div class="thumnail"></div>
+    </div>
+  </div>
+  <div id="wrap">
+    <div id="text">
+      <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+      <p>Lorem, ipsum dolor sit amet</p>
+    </div>
+  </div>
+
+
+  <script>
+
+    var wrap = document.querySelector("#wrap");
+      function windowClick {
+        if(event)
+      }
+  </script>
+</body>
+</html>
