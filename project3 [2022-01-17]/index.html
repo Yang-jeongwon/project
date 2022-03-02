@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  
+  </style>
+</head>
+<body>
+  <div id="container">
+    <section></section>
+  </div>
+  
+  
+  <script>
+
+    const section = document.querySelector('#container section');
+    console.dir(section);
+    
+
+
+    const texter = ["나는 날개달린 호랑이다", "나는 오늘 맛있는 걸 먹을거다", "나는 오늘 집에가서 잘거야"];
+
+    let count = 0;
+    let timer = setInterval(function() {
+      if(count < texter.length) {
+        section.textContent = texter[count];
+        count = count +1;
+
+      } else {
+        count = 0;
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
